@@ -1,13 +1,31 @@
-CREATE TABLE Shoes (id INTEGER PRIMARY KEY, Name TEXT, Color TEXT, Size INTEGER, Style TEXT);
-INSERT INTO Shoes VALUES (1, "Lebron", "Black", 15, "Basketball");
-INSERT INTO Shoes VALUES (2, "Chipper", "Blue and White", 12, "Baseball");
-INSERT INTO Shoes VALUES (3, "Serena", "White", 11, "Tennis");
-INSERT INTO Shoes VALUES (4, "Gabby", "Pink", 6, "Gymnastics");
-INSERT INTO Shoes VALUES (5, "PHelps", "Blue and Red", 15, "Swimming");
-INSERT INTO Shoes VALUES (6, "Carter", "Black", 11, "stability");
-INSERT INTO Shoes VALUES (7, "Ethan", "Red and Black", 3, "Speed"); 
-INSERT INTO Shoes VALUES (8, "Mom", "Green", 7, "Walking");
-INSERT INTO Shoes VALUES (9, "Mary", "Pink", 10, "Stability");
+CREATE TABLE Shoes (id INTEGER PRIMARY KEY, Name TEXT, Color TEXT, Size INTEGER, Style TEXT, Price INTEGER);
+
+INSERT INTO Shoes VALUES (1, "Lebron", "Black", 15, "Basketball", 175);
+INSERT INTO Shoes VALUES (2, "Chipper", "Blue and White", 12, "Baseball", 85);
+INSERT INTO Shoes VALUES (3, "Serena", "White", 11, "Tennis",300);
+INSERT INTO Shoes VALUES (4, "Gabby", "Pink", 6, "Gymnastics",200);
+INSERT INTO Shoes VALUES (5, "PHelps", "Blue and Red", 15, "Swimming",87);
+INSERT INTO Shoes VALUES (6, "Carter", "Black", 11, "stability", 125);
+INSERT INTO Shoes VALUES (7, "Ethan", "Red and Black", 3, "Speed", 57); 
+INSERT INTO Shoes VALUES (8, "Mom", "Green", 7, "Walking", 50);
+INSERT INTO Shoes VALUES (9, "Mary", "Pink", 10, "Stability", 150);
+INSERT INTO Shoes VALUES (10, "Gleason", "Black and Red", 13, "Speed", 220);
+INSERT INTO Shoes VALUES (11, "Drew", "Black and Gold", 13, "Stability", 200);
+INSERT INTO Shoes VALUES (12, "Kamra", "Black and Gold", 13, "Speed", 325);
+INSERT INTO Shoes VALUES (13, "Cricket", "Black", 1, "Speed", 37);
+INSERT INTO Shoes VALUES (14, "Daisy", "Tan", 3, "Walking", 25);
+INSERT INTO Shoes VALUES (15, "Myrtle", "Tan", 6, "Walking", 40);
+
+
 
 
 SELECT * FROM Shoes;
+
+--Shoes ordered by Price
+SELECT * FROM Shoes ORDER BY Price;
+
+--Shoes ordered by size
+SELECT * FROM Shoes ORDER BY Size;
+
+--Average price of shoes
+SELECT AVG(Price) FROM Shoes
